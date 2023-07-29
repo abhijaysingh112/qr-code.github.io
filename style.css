@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: linear-gradient(to bottom right,#42275a 25%, #734b6d 50%);
+}  
+
+.container{
+ padding: 30px 15px 30px 30px;
+    border-radius: 9px;
+    display: flex;
+    text-align: center;
+    background-color: wheat;
+
+}
+.qr-box {
+    
+    padding-right: 15px;
+    min-width: 390px;
+}
+.qr-input{
+     align-items: flex-start;
+     display: flex;
+     text-align: left;
+     align-items: center;
+     padding-bottom: 20px;
+}
+
+.textbox{
+    width: 100%;
+}
+.textbox2{
+       width:50%
+}
+label{
+    width: 30%;
+}
+
+.display{
+    padding: 5px;
+    width: 100%;
+}
+
+textarea,select,input,button{
+    border: none;
+    resize: none;
+    font-size: 1rem;
+}
+textarea,select{
+    border: 1px solid #e7e7e7;
+    border-radius: 7px;
+    padding: 6px;
+}
+
+input[type="range"]{
+    accent-color: orange;
+}
+
+button{
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: white;
+    background-color: orangered;
+
+}
+
+.btn-download {
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+img{
+    max-width: 30px;
+    max-height: 30px;
+}
+ p{
+    padding: 5px;
+ }
+
+ .hide-dot checkbox{
+    margin-top: 5px;
+    padding: 4px;
+ }
+ .hide-dot label {
+   display: flexbox;
+   align-items: center;
+   justify-content: center; 
+   
+ }
+
+
+ @media(min-width:315px)and (max-width: 500px){
+   body{
+  background: linear-gradient(to bottom right,#42275a 25%, #734b6d 50%) no-repeat center center;;
+  background-size: 1300px 1500px;
+  width:100%;
+   }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .qr-box{
+
+        min-width:100px;
+    }
+ 
+  p{
+    min-width: 100px;
+  }
+.btn-download{
+    min-width: 100px;
+}
+  
+ }   
+ 

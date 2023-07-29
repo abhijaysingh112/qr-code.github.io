@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <title>QR Code Generator | Code Traversal</title>
+</head>
+<body>
+ <div class="container">
+  <div class="qr-box">
+   <div class="qr-input">
+    <label id="input" for="data">Enter Text:</label>
+     <textarea id= "qr-text" class="textbox"></textarea>
+   </div>
+   <div class="qr-input">
+      <label  for="size">Size:</label>
+      <input id = "size" type="range" id="size" min="10" max="30" value="1" class="textbox">
+   </div>
+   <div class="qr-input">  
+    <label for="logo">Logo:</label>
+    <input id="logo" type="file" hidden>
+
+     <div class="textbox2">
+      <a href="javascript:browse();"><span>  
+          <img src="data:image/png;base64,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">    </span></a>
+        </div>
+   <div class="textbox2">
+    <button id="clear" type="button">Remove</button>
+   </div>
+   </div>
+   <div class="qr-input">
+    <label for="margin">Margin:</label>
+    <input id = "margin" type="range" min="1" max="30" value="1" class="textbox">
+   </div>
+   <div class="qr-input">
+    <label for="margin">Dot Mode:</label>
+    <select  id="dot" class="textbox">
+        <option value="square">Square</option>
+        <option value="dots">Dots</option>
+        <option value="round">Rounded</option>
+        <option value="ext-rounded">Extra Rounded</option>
+        <option value="classy">Classy</option>
+        <option value="classy-round">Classy Rounded</option>
+    </select>
+   </div>
+   <div class="qr-input">
+    <label for="dot-color">Dot Color:</label>
+    <input type="color" id="dot-color1" class="textbox2">
+    <input type="color" id="dot-color2" class="textbox2">
+    
+   </div>
+  </div>
+  <div class="display">
+    <div class="hide-dot">
+      <label id="hide-dots" for="background-dots">Hide Dots:</label>
+      <input type="checkbox" id="check" >
+    </div>
+    <div id="canvas" class="qr-display"></div>
+    <p>100px x 100px</p>
+    <button id = "btn-download" class="btn-download" type="button">Download</button>
+  </div>
+ </div>
+  <script src=script.js></script>
+
+</body>
+</html>
